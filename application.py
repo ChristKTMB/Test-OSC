@@ -23,7 +23,7 @@ def update_article():
     data = {
         "title": input("Entrez le nouveau titre de l'article: ")
     }
-    response = requests.put(f"{orange_api_url}{article_id}/", json=data)
+    response = requests.patch(f"{orange_api_url}{article_id}/", json=data)
     print("Réponse de la mise à jour:", response.json())
 
 def delete_article():
